@@ -11,7 +11,6 @@ function getTasks() {
         })
       }
     })
-  console.log('hey there')
 }
 
 function processTaskSubmission(event) {
