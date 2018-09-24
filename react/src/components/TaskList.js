@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TaskListItem from './task_list_item'
+import TaskListItem from './TaskListItem'
 
 const TaskList = (props) => {
   const taskListItems = props.tasks.map((task) => {

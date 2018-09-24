@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const TaskForm = (props) => {
+const TaskFormContainer = (props) => {
   return (
     <div>
       <h1>New Task</h1>
@@ -15,4 +15,4 @@ const TaskForm = (props) => {
   )
 }
 
-export default TaskForm
+export default TaskFormContainer
