@@ -2,19 +2,19 @@
   "tasks": [
     {
       "id": 1,
-      "description": "Play Poohsticks at the Bridge."
+      "name": "Play Poohsticks at the Bridge."
     },
     {
       "id": 2,
-      "description": "Say hello to Piglet"
+      "name": "Say hello to Piglet"
     },
     {
       "id": 3,
-      "description": "Hunt for Heffalumps"
+      "name": "Hunt for Heffalumps"
     },
     {
       "id": 4,
-      "description": "Bounce with Tiger"
+      "name": "Bounce with Tiger"
     }
   ]
 }

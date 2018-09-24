@@ -1,6 +1,7 @@
 require "sinatra"
 require 'json'
 require 'pry'
+require "sinatra/json"
 
 set :bind, '0.0.0.0'  # bind to all interfaces
 set :public_folder, File.join(File.dirname(__FILE__), "public")
@@ -15,8 +16,16 @@ def new_task_id
 end
 
 def write_to_json_file(task)
-  new_task = {id: new_task_id, description: task["description"] }
-  new_tasks = { tasks: tasks["tasks"].concat([new_task]) }
+  # wherein we take a new task from POST, add it to our tasks json with a correct id, and persist our information.
+  new_task = {
+    id: new_task_id,
+    name: task["name"]
+  }
+
+  new_tasks = {
+    tasks: tasks["tasks"].concat([new_task])
+  }
+
   json_tasks = JSON.pretty_generate(new_tasks, indent: '  ')
   File.write("tasks.json", json_tasks)
 end
