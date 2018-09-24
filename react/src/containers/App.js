@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import TaskList from '../components/task_list'
 import TaskForm from '../components/task_form';
 
@@ -15,41 +16,44 @@ class App extends Component {
   componentDidMount(){
     let that = this
     fetch('/api/v1/tasks')
-      .then(response => {
-        return response.json()
-      })
-      .then(json => {
-        if(json.tasks){
-          this.setState({
-            tasks: json.tasks
-          })
-        }
-      })
-    this.setState({
-      taskDescription: '',
-      submissionError: ''
+    .then(response => {
+      return response.json()
+    })
+    .then(json => {
+      if(json.tasks){
+        this.setState({ tasks: json.tasks })
+      }
     })
   }
 
-  handleSubmit(e) {
-    e.preventDefault()
+  // handleClearForm(event){
+  //   event.preventDefault()
+  //   this.setState({
+  //     taskDescription: '',
+  //     submissionError: ''
+  //   })
+  // }
+
+  handleSubmit(event) {
+    event.preventDefault()
     if(!this.state.taskDescription) {
       this.setState({
         submissionError: 'Please specify a description'
       })
     }
     else {
-      fetch('/api/v1/tasks', { method: 'post', body:
-        JSON.stringify({task: {description: this.state.taskDescription}})})
-      this.setState({
-        submissionError: '',
-        taskDescription: ''
-      })
+      // fetch('/api/v1/tasks', { method: 'post', body:
+      //   JSON.stringify({task: {description: this.state.taskDescription}})})
+      // this.setState({
+      //   submissionError: '',
+      //   taskDescription: ''
+      // })
+
     }
   }
 
-  handleDescriptionChange(e) {
-    e.preventDefault()
+  handleDescriptionChange(event) {
+    event.preventDefault()
     this.setState({
       taskDescription: e.target.value
     })

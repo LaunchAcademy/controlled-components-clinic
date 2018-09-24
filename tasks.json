@@ -2,19 +2,19 @@
   "tasks": [
     {
       "id": 1,
-      "description": "Go to moon on Thursday"
+      "description": "Play Poohsticks at the Bridge."
     },
     {
       "id": 2,
-      "description": "Hike Appalachian Friday"
+      "description": "Say hello to Piglet"
     },
     {
       "id": 3,
-      "description": "Meet with Elon re: pitch for LoopedIn"
+      "description": "Hunt for Heffalumps"
     },
     {
       "id": 4,
-      "description": "hello there everyone"
+      "description": "Bounce with Tiger"
     }
   ]
 }
