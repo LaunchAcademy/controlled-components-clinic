@@ -1,6 +1,6 @@
-// This code may be used to show how we would perform this JS functionality WITHOUT react, but inspect
-// but is not required for comprehension, and could possibly confuse.
-
+// // This code may be used to show how we would perform this JS functionality WITHOUT react, but inspect
+// // but is not required for comprehension, and could possibly confuse.
+//
 // function getTasks() {
 //   fetch('/api/v1/tasks')
 //     .then(response => {
