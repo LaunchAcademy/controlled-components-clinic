@@ -30,6 +30,14 @@ class App extends Component {
       <div className="column row app">
         <h1>Hundred Acre Woods Task List</h1>
         {taskList}
+        <br/>
+        <form>
+          <label>Task Name</label>
+          <input type="text" name="name"/>
+          <label>Who Should Do It</label>
+          <input type="text" name="assignee"/>
+          <input type="submit"/>
+        </form>
       </div>
     )
   }
