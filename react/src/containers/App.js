@@ -4,23 +4,19 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      tasks: []
-      // This will eventually be an array of objects e.g. {taskName: sing cottlestone pie}
+      tasks: [
+        {task: "Sing Cottlestone Pie", who: "Winnie the Pooh"},
+        {task: "Hug Eeyore", who: "Piglet"}
+      ]
     }
   }
 
   componentDidMount(){
-    // For if we wish to do some fetching.
-    // fetch('/SOME-ENDPOINT')
-    // .then(response => {
-    //   return response.json()
-    // })
-    // .then(json => {
-    //   ...
-    // })
+    console.log("App.js has mounted!")
   }
 
   render() {
+    console.log("App.js has rendered!")
     return (
       <div>
         <h1>Pooh Tasks List</h1>
