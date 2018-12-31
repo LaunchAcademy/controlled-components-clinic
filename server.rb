@@ -41,7 +41,9 @@ post "/api/v1/tasks" do
   json = JSON.parse(request.body.read)
   if json["task"]
     write_to_json_file(json["task"])
+    content_type :json
     status 200
+    tasks.to_json
   else
     status 500
     { error: "Oops, something bad happened yo" }.to_json
