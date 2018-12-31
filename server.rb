@@ -19,7 +19,8 @@ def write_to_json_file(task)
   # wherein we take a new task from POST, add it to our tasks json with a correct id, and persist our information.
   new_task = {
     id: new_task_id,
-    name: task["name"]
+    name: task["name"],
+    assignee: task["assignee"]
   }
 
   new_tasks = {

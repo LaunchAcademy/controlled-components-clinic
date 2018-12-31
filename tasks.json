@@ -2,19 +2,23 @@
   "tasks": [
     {
       "id": 1,
-      "name": "Play Poohsticks at the Bridge."
+      "name": "Play Poohsticks at the Bridge.",
+      "assignee": "Winnie the Pooh"
     },
     {
       "id": 2,
-      "name": "Say hello to Piglet"
+      "name": "Say hello to Piglet",
+      "assignee": "Roo"
     },
     {
       "id": 3,
-      "name": "Hunt for Heffalumps"
+      "name": "Hunt for Heffalumps",
+      "assignee": "Kanga"
     },
     {
       "id": 4,
-      "name": "Bounce with Tiger"
+      "name": "Bounce with Tigger",
+      "assignee": "Eeyore"
     }
   ]
 }

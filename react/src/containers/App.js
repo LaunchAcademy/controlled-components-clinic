@@ -5,8 +5,8 @@ class App extends Component {
     super(props)
     this.state = {
       tasks: [
-        {task: "Sing Cottlestone Pie", who: "Winnie the Pooh"},
-        {task: "Hug Eeyore", who: "Piglet"}
+        {id: 1, name: "Sing Cottlestone Pie", assignee: "Winnie the Pooh"},
+        {id: 2, name: "Hug Eeyore", assignee: "Piglet"}
       ]
     }
   }
@@ -17,9 +17,19 @@ class App extends Component {
 
   render() {
     console.log("App.js has rendered!")
+
+    let taskList = this.state.tasks.map(task => {
+      return(
+        <li key={task.id}>
+          {task.name}, <i>{task.assignee}</i>
+        </li>
+      )
+    })
+
     return (
-      <div>
-        <h1>Pooh Tasks List</h1>
+      <div className="column row app">
+        <h1>Hundred Acre Woods Task List</h1>
+        {taskList}
       </div>
     )
   }
