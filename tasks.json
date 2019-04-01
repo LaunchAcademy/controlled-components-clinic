@@ -1,20 +1,7 @@
 {
   "tasks": [
-    {
-      "id": 1,
-      "name": "Play Poohsticks at the Bridge."
-    },
-    {
-      "id": 2,
-      "name": "Say hello to Piglet"
-    },
-    {
-      "id": 3,
-      "name": "Hunt for Heffalumps"
-    },
-    {
-      "id": 4,
-      "name": "Bounce with Tiger"
-    }
+    { "taskName": "sing cottlestone pie", "deadline": "Alwayss....", "priority": "High" },
+    { "taskName": "Vist Eeyore", "deadline": "Yesterday", "priority": "Low" },
+    { "taskName": "Eat Honey", "deadline": "Now", "priority": "EXTREME" }
   ]
 }
