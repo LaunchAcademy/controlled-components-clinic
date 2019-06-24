@@ -2,19 +2,33 @@
   "tasks": [
     {
       "id": 1,
-      "name": "Play Poohsticks at the Bridge."
+      "taskName": "Play Poohsticks at the Bridge.",
+      "priority": "low"
     },
     {
       "id": 2,
-      "name": "Say hello to Piglet"
+      "taskName": "Say hello to Piglet",
+      "priority": "low"
     },
     {
       "id": 3,
-      "name": "Hunt for Heffalumps"
+      "taskName": "Hunt for Heffalumps",
+      "priority": "low"
     },
     {
       "id": 4,
-      "name": "Bounce with Tiger"
+      "taskName": "Bounce with Tiger",
+      "priority": "low"
+    },
+    {
+      "id": 5,
+      "name": "Relax",
+      "priority": "High"
+    },
+    {
+      "id": 6,
+      "taskName": "dfakjsdfhjsdf",
+      "priority": "sdfjsadhfs"
     }
   ]
 }

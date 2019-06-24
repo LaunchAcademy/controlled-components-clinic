@@ -19,7 +19,8 @@ def write_to_json_file(task)
   # wherein we take a new task from POST, add it to our tasks json with a correct id, and persist our information.
   new_task = {
     id: new_task_id,
-    name: task["name"]
+    taskName: task["taskName"],
+    priority: task["priority"]
   }
 
   new_tasks = {
@@ -28,6 +29,8 @@ def write_to_json_file(task)
 
   json_tasks = JSON.pretty_generate(new_tasks, indent: '  ')
   File.write("tasks.json", json_tasks)
+
+  return new_task
 end
 
 get "/api/v1/tasks" do
@@ -38,9 +41,11 @@ end
 
 post "/api/v1/tasks" do
   json = JSON.parse(request.body.read)
-  if json["task"]
-    write_to_json_file(json["task"])
+  # binding.pry
+  if json
     status 200
+    write_to_json_file(json).to_json
+    # binding.pry
   else
     status 500
     { error: "Oops, something bad happened yo" }.to_json
