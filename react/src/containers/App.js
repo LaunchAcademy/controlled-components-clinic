@@ -13,37 +13,13 @@ class App extends Component {
     this.addNewTask = this.addNewTask.bind(this)
   }
 
-    componentDidMount(){
-      fetch('/api/v1/tasks')
-      .then(response => {
-        return response.json()
-      })
-      .then((tasksJson) => {
-        // debugger
-        this.setState({ tasks: tasksJson.tasks })
-
-      })
-    }
-
   addNewTask(newTaskObject){
     // let oldTasks = this.state.tasks
     // let newTasks = oldTasks.concat(newTaskObject)
     //
     // this.setState(tasks: newTasks)
-    fetch("/api/v1/tasks", {
-      method: "POST",
-      body: JSON.stringify(newTaskObject)
-    })
-    .then((response) => {
-      return response.json()
-    })
-    .then((newTaskFromBackend) => {
-      debugger
-      this.setState({ tasks: this.state.tasks.concat(newTaskFromBackend) })
-    })
 
-
-    // this.setState({ tasks: this.state.tasks.concat(newTaskObject) })
+    this.setState({ tasks: this.state.tasks.concat(newTaskObject) })
   }
 
   render() {
